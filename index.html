@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gabe Romualdo – hello, world!</title>
     <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <script>
+      const colors = ["#b45309", "#b91c1c", "#c2410c", "#a16207", "#4d7c0f", "#15803d", "#047857", "#0f766e", "#0e7490", "#0369a1", "#1d4ed8", "#4338ca", "#6d28d9", "#7e22ce", "#a21caf", "#be185d", "#be123c"];
+      window.addEventListener('load', () => {
+        const chooseRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
+        document.body.setAttribute('style', `background-color: ${chooseRandom(colors)};`)
+      });
+    </script>
   </head>
   <body>
     <style>
@@ -16,10 +23,9 @@
       img {
         padding: 1rem;
         width: 100%;
-        max-width: 450px;
+        max-width: 500px;
       }
       body {
-        background-color: #0c4a6e;
         display: flex;
         justify-content: center;
         align-items: center;
