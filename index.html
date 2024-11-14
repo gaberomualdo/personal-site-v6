@@ -6,10 +6,32 @@
     <title>Gabe Romualdo – hello, world!</title>
     <link rel="icon" type="image/x-icon" href="favicon.png" />
     <script>
-      const colors = ["#b45309", "#b91c1c", "#c2410c", "#a16207", "#4d7c0f", "#15803d", "#047857", "#0f766e", "#0e7490", "#0369a1", "#1d4ed8", "#4338ca", "#6d28d9", "#7e22ce", "#a21caf", "#be185d", "#be123c"];
+      const colors = [
+        '#b45309',
+        '#b91c1c',
+        '#c2410c',
+        '#a16207',
+        '#4d7c0f',
+        '#15803d',
+        '#047857',
+        '#0f766e',
+        '#0e7490',
+        '#0369a1',
+        '#1d4ed8',
+        '#4338ca',
+        '#6d28d9',
+        '#7e22ce',
+        '#a21caf',
+        '#be185d',
+        '#be123c',
+      ];
       window.addEventListener('load', () => {
-        const chooseRandom = (arr) => arr[Math.floor(Math.random() * arr.length)];
-        document.body.setAttribute('style', `background-color: ${chooseRandom(colors)};`);
+        const chooseRandom = (arr) =>
+          arr[Math.floor(Math.random() * arr.length)];
+        document.body.setAttribute(
+          'style',
+          `background-color: ${chooseRandom(colors)};`
+        );
       });
     </script>
   </head>
@@ -20,10 +42,27 @@
         padding: 0;
         box-sizing: border-box;
       }
-      img {
-        padding: 1rem;
+      main {
         width: 100%;
+        height: 100dvh;
         max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      div {
+        flex: 1 1 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+      img.padded {
+        padding: 1rem;
       }
       body {
         display: flex;
@@ -35,6 +74,11 @@
         width: 100%;
       }
     </style>
-    <img src="site-svg.svg" alt="Gabe Romualdo" />
+    <main>
+      <div>
+        <img src="site-svg.svg" alt="Gabe Romualdo" />
+      </div>
+      <img class="padded" src="contact.svg" alt="Contact email" />
+    </main>
   </body>
 </html>
